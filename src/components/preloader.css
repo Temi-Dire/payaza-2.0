@@ -1,0 +1,54 @@
+/* Main container styling */
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  /* Logo styling */
+.logo {
+    position: absolute;
+    width: 100%; /* Ensures image fills the container */
+    height: 100%; /* Ensures image fills the container */
+    object-fit: contain; /* Scales the image without distortion */
+}
+
+  /* Animated gradient overlay */
+.gradient-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8));
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0)); */
+    background-size: 200%;
+    animation: animate-gradient 2.5s linear infinite;
+    mix-blend-mode: screen; /* Blend the gradient with the logo */
+    z-index: 1;
+}
+
+  /* Keyframes for gradient animation */
+@keyframes animate-gradient {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+
+.preloader {
+    height: 100vh;
+    width: 100%;
+    background: #ffffff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
